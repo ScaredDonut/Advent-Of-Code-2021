@@ -12,19 +12,19 @@ for ($i = 0; $i < count($submarinePos); $i++) {
 		[$movementType, $movementAmount] = explode(" ", $submarinePos[$i]);
 		$movementAmount = (int)$movementAmount;
 		
-		if ($movementType == 'forward') {
+		if ($movementType == "forward") {
 			
 			$currPos += $movementAmount;
 			echo "<br />";
 			echo "<font color='orange'><b>Movement: " . $currPos . "</b></font> (Forward)";
 		
-		} elseif ($movementType == 'up') {
+		} elseif ($movementType == "up") {
 			
 			$currDepth -= $movementAmount;
 			echo "<br />";
 			echo "<font color='red'><b>Depth:  " . $currDepth . "</b></font> (Up)";
 			
-		} elseif ($movementType == 'down') {
+		} elseif ($movementType == "down") {
 			
 			$currDepth += $movementAmount;
 			echo "<br />";

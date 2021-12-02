@@ -14,7 +14,7 @@ for ($i = 0; $i < count($submarinePos); $i++) {
 		[$movementType, $movementAmount] = explode(" ", $submarinePos[$i]);
 		$movementAmount = (int)$movementAmount;
 		
-		if ($movementType == 'forward') {
+		if ($movementType == "forward") {
 			
 			$currPos += $movementAmount;
 			$currDepth += $aimLocation * $movementAmount;			
@@ -24,13 +24,13 @@ for ($i = 0; $i < count($submarinePos); $i++) {
 			echo "<br />";
 			echo "<font color='lightorange'><b>Depth: " . $currDepth . "</b></font> (Forward)";
 		
-		} elseif ($movementType == 'up') {
+		} elseif ($movementType == "up") {
 			
 			$aimLocation -= $movementAmount;
 			echo "<br />";
 			echo "<font color='red'><b>Depth:  " . $aimLocation . "</b></font> (Up)";
 			
-		} elseif ($movementType == 'down') {
+		} elseif ($movementType == "down") {
 			
 			$aimLocation += $movementAmount;
 			echo "<br />";
@@ -39,7 +39,7 @@ for ($i = 0; $i < count($submarinePos); $i++) {
 	}
 
 	echo "<br />";
-	
-	echo "<b>Final Answer: ($currPos * $currDepth) = " . $currPos * $currDepth . "</b>";
+	$finalAnswer = $currPos * $currDepth;
+	echo "<b>Final Answer: ($currPos * $currDepth) = " . $finalAnswer . "</b>";
 
 ?>
