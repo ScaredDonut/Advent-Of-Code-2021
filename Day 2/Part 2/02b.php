@@ -10,7 +10,6 @@ echo "$currPos/$currDepth";
 
 for ($i = 0; $i < count($submarinePos); $i++) {
 
-	for ($i = 0; $i < count($submarinePos); $i++) {
 		
 		[$movementType, $movementAmount] = explode(" ", $submarinePos[$i]);
 		$movementAmount = (int)$movementAmount;
@@ -38,11 +37,9 @@ for ($i = 0; $i < count($submarinePos); $i++) {
 			echo "<font color='green'><b>Depth:  " . $currDepth . "</b></font> (Up)";
 		}
 	}
-	
+
 	echo "<br />";
 	
 	echo "<b>Final Answer: ($currPos * $currDepth) = " . $currPos * $currDepth . "</b>";
-}
-
 
 ?>
